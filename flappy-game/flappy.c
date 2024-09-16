@@ -71,17 +71,16 @@ int main()
 				if (event.key.keysym.sym == SDLK_ESCAPE){
 					exit(0);
 
-				}
-				if (event.key.keysym.sym == SDLK_p) {
-                    current_pillar_color = (current_pillar_color + 1) % 6;
-                }
+				}else if (event.key.keysym.sym == SDLK_p) {
+                                current_pillar_color = (current_pillar_color + 1) % 6;
+                                }
 
-				}else if (event.key.keysym.sym == SDLK_b) {
+				else if (event.key.keysym.sym == SDLK_b) {
                                 // Change background color by cycling through different colors
                                 bg_color.r = rand() % 256;
                                 bg_color.g = rand() % 256;
                                 bg_color.b = rand() % 256;
-    }
+                                }
 
                         case SDL_MOUSEBUTTONDOWN:
                                 if(gamestate == ALIVE)
